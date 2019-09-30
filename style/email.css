@@ -1,0 +1,13 @@
+.blue{
+    background-color: #0078d4;
+}
+.white.text{
+    color: white;
+}
+
+.bigText{
+    font-size: 1.3rem; 
+}
+.largeText{
+    font-size: 2rem; 
+}
