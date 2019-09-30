@@ -4,10 +4,12 @@ body{
 
 .squareWhite{
     background-color: white;
-    width: 30rem !important;
+    width: 35rem !important;
     margin-top: 12%
 }
-
+.padding{
+  padding: 1rem;
+}
 .input{
     border-width: 0rem !important;
     width: 12rem;
