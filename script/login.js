@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#senha").hide();
     function proximo() {
         if ($("#input_login").val() != "") {
-            $("#nome").html('' + $("#input_login").val());
+            $("#nome").html('<i class="fa fa-arrow-left"></i> ' + $("#input_login").val());
             $("#login").hide();
             $("#senha").removeClass("invisible");
             $("#input_login").removeClass("error");
