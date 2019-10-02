@@ -17,3 +17,7 @@
 .big{
     height : 3rem !important;
 }
+
+.paddinTop{
+    padding-top: 0.5rem;
+}
