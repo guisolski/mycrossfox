@@ -1,1 +1,1 @@
-Be happy!
+Don't worry, Be happy!
