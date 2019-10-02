@@ -11,3 +11,9 @@
 .largeText{
     font-size: 2rem; 
 }
+.icone{
+    width: 2.5rem;
+}
+.big{
+    height : 3rem !important;
+}
