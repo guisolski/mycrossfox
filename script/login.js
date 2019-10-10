@@ -1,5 +1,8 @@
 $(document).ready(function () {
     $("#senha").hide();
+
+
+
     function proximo() {
         if ($("#input_login").val() != "") {
             $("#nome").html('<i class="fa fa-arrow-left"></i> ' + $("#input_login").val());
@@ -9,19 +12,16 @@ $(document).ready(function () {
             $("#senha").show();
         }
         else {
+            $("#titulo_login #msg_erro_login").remove()
             $("#input_login").addClass("error");
-            alert("Entre com um valor");
+            $("#titulo_login").append("<label class='text-danger' id='msg_erro_login'><br>Insira um endereço de email, número de telefone ou nome Skype válidos.</label>")
         }
     }
-
-
-
 
     $("#nome").click(function () {
         $("#login").show();
         $("#senha").hide();
     });
-
 
     $("#proximo").click(function () {
         proximo();
@@ -34,12 +34,14 @@ $(document).ready(function () {
     });
 
     $("#entrar").click(function () {
-        if ($("#input_login").val() != "") {
+        if ($("#input_senha").val() != "") {
             alert("mandar pro servidor");
         }
         else {
-            $("#input_login").addClass("error");
-            alert("Entre com um valor");
+            $("#titulo_senha #msg_erro_senha").remove()  
+            $("#input_senha").addClass("error");
+            $("#titulo_senha").append("<label id='msg_erro_senha' class='text-danger'>Sua conta ou senha está incorreta.<br>"+
+              "Se você não se lembra de sua senha redefina-a em 'Esqueceu a senha?'</label>")
         }
     });
 

@@ -7,9 +7,7 @@ body{
   width: 30rem !important;
   margin-top: 12%;
 }
-.padding{
-  padding: 1rem;
-}
+
 .noBorder{
   border-width: 0rem !important;
 }
@@ -29,10 +27,18 @@ body{
   }
 }
 
+.input-login{
+  border-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+  border-bottom-color: gray !important;
+}
+
 .error{
-  border-style: solid !important;
-  border-width: 0.1rem !important;
-  border-color: red !important;
+  border-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+  border-bottom-color: red !important;
 }
 
 .pointer{
@@ -44,17 +50,18 @@ body{
 }
 
 .titulo{
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .icone{
-  width: 1.5rem;
+  width: 25px;
 }
 .icone.texto{
   margin-left: 20%;
   margin-bottom: 0rem;
   font-size: 1.2rem;
 }
+
 
 .rotateimg180 {
   -webkit-transform:rotate(180deg);
