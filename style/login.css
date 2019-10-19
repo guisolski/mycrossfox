@@ -1,58 +1,72 @@
 body{
-    background-image: url("../assets/images/bg_login.jpg");
+  background-image: url("../assets/images/bg_login.jpg");
 }
 
 .squareWhite{
-    background-color: white;
-    width: 30rem !important;
-    margin-top: 12%;
-}
-.padding{
-  padding: 1rem;
-}
-.noBorder{
-    border-width: 0rem !important;
+  background-color: white;
+  width: 30rem !important;
+  margin-top: 12%;
 }
 
+.noBorder{
+  border-width: 0rem !important;
+}
 
 .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
+}
 
-  .error{
-    border-style: solid !important;
-    border-width: 0.1rem !important;
-    border-color: red !important;
-  }
+.input-login{
+  border-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+  border-bottom-color: gray !important;
+}
 
-  .pointer{
-    cursor: pointer !important;
-  }
+.error{
+  border-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+  border-bottom-color: red !important;
+}
 
-  .aling-right{
-    float: right !important;
-  }
+.pointer{
+  cursor: pointer !important;
+}
 
-  .titulo{
-    font-size: 2rem;
-  }
+.aling-right{
+  float: right !important;
+}
 
-  .icone{
-    width: 2rem;
-  }
-  .icone.texto{
-    margin-top: 15% !important;
-    margin-left: 5% !important;
-    font-size: 1.2rem;
-  }
+.titulo{
+  font-size: 1.5rem;
+}
+
+.icone{
+  width: 25px;
+}
+.icone.texto{
+  margin-left: 20%;
+  margin-bottom: 0rem;
+  font-size: 1.2rem;
+}
+
+
+.rotateimg180 {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
