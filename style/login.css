@@ -1,3 +1,6 @@
+html{
+  height: 100%;
+}
 body{
   background-image: url("../assets/images/bg_login.jpg");
 }
@@ -69,4 +72,10 @@ body{
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+@media (max-width: 576px) {
+  body{
+    background-image: none;
+  }
 }

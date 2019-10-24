@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/icones/microsoft.png">
     <link rel="stylesheet" type="text/css" href="../style/login.css">
     <link rel="stylesheet" type="text/css" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <script src="../assets/jquery/jquery-3.4.1.min.js"></script>
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-    <div class="container squareWhite  p-5">
+    <div class="container squareWhite p-5">
         <div class="container">
             <div id="login">
                 <div class="row">
@@ -23,8 +24,8 @@
                             <div>
                                 <img src="../assets/images/icones/microsoft.png" class="mr-2 icone rotateimg180">
                             </div>
-                            <div>
-                                <label class="text-secondary font-weight-bold">Mycrossfox</label>
+                            <div class="p-0">
+                                <label class="text-muted font-weight-bold" id="titulo_Mycrossfox">Mycrossfox</label>
                             </div>
                         </div>
                     </div>
@@ -34,7 +35,7 @@
                 </div>
                 <div class="row input-group input-group-lg">
                     <input type="text" class="input-login form-control noBorder shadow-none p-0" aria-label="Sizing example input"
-                        placeholder="Email,telefone ou Skype" aria-describedby="inputGroup-sizing-lg" id="input_login">
+                        placeholder="Email" aria-describedby="inputGroup-sizing-lg" id="input_login">
                 </div>
                 <div class="row small">
                     <label>Não tem uma conta? <a href="">Crie uma!</a> </label>
@@ -61,7 +62,7 @@
                     <label class="titulo font-weight-bold">Inserir Senha</label>
                 </div>
                 <div class="row input-group input-group-lg">
-                    <input type="password" class="form-control noBorder shadow-none p-0" aria-label="Sizing example input" 
+                    <input type="password" class="input-login form-control noBorder shadow-none p-0" aria-label="Sizing example input" 
                         placeholder="Senha" aria-describedby="inputGroup-sizing-lg" id="input_senha">
                 </div>
                 <div class="row">
