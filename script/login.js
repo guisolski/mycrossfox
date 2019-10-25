@@ -36,9 +36,10 @@ $(document).ready(function () {
 
     function entrarSenha(){
         if ($("#input_senha").val() != "") {
-            alert("mandar pro servidor");
-            $("#input_senha").removeClass("error")
-            $("#titulo_senha #msg_erro_senha").remove()
+            window.location.href = "email.html"
+            // alert("mandar pro servidor");
+            // $("#input_senha").removeClass("error")
+            // $("#titulo_senha #msg_erro_senha").remove()
         }
         else {
             $("#titulo_senha #msg_erro_senha").remove()  
