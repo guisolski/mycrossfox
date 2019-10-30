@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/icones/microsoft.png">
+    <link rel="stylesheet" type="text/css" href="../style/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <script src="../assets/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../assets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="../assets/fontawesome/fontawesome.js"></script>
+    <script src="../script/cadastro.js"></script>
+    <title>Entrar na conta Mycrossfox</title>
+</head>
+
+<body>
+    <div class="container squareWhite p-5">
+        <div class="container">
+            <div id="criarLogin">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div>
+                                <img src="../assets/images/icones/microsoft.png" class="mr-2 icone rotateimg180">
+                            </div>
+                            <div class="p-0">
+                                <label class="text-muted font-weight-bold" id="titulo_Mycrossfox">Mycrossfox</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="titulo_cadastro" class="row">
+                    <label  class="titulo font-weight">Criar conta</label>
+                </div>
+                <div class="row input-group input-group">
+                    <input type="text" class="input-emailcadastro form-control noBorder shadow-none p-0"
+                        placeholder="Novo email" aria-describedby="inputGroup-sizing" id="input_criarlogin">
+
+                     <div id = "dropdown_dominio" class = "row input-dropdownMenu ml-2 p0" >
+                        <div class="input-group input-group-sm" id = "dropdown_opcoes">
+                          <select class="form-control noBorder shadow-none" style = "cursor:pointer" id = "selecionarOpcao">
+                            <option selected>@outlook.com</option>
+                            <option value="1">@outlook.com.br</option>
+                            <option value="2">@hotmail.com</option>
+                          </select>
+                        </div>
+                     </div>
+                </div>
+
+
+                <div class="d-flex flex-row-reverse">
+                    <button type="button" class="shadow-none px-5 btn btn-primary mt-5" id="proximo">
+                        Próximo
+                    </button>
+                </div>
+            </div>
+            <div id="criarSenha" class="invisible">
+                <div class="row">
+                    <div>
+                        <img src="../assets/images/icones/microsoft.png" class="mr-2 icone rotateimg180">
+                    </div>
+                    <div>
+                        <label  class="text-secondary font-weight-bold">Mycrossfox</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label id="nome" class="pointer"> </label>
+                </div>
+                <div id="titulo_senha"  class="row">
+                    <label class="titulo font-weight-bold">Crie uma senha</label>
+                    <label id = "desc_criarSenha"> Digite a senha que você gostaria de usar com sua conta.</label>
+                </div>
+                <div id = "div_desc_criarSenha">
+                </div>
+                <div class="row input-group input-group-lg">
+                    <input type="password" class="input-login form-control noBorder shadow-none p-0" aria-label="Sizing example input"
+                        placeholder="Senha" aria-describedby="inputGroup-sizing-lg" id="input_senha">
+                </div>
+                <div class="row">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="mantenha">
+                        <label class="form-check-label" for="mantenha">Mantenha-me conectado.</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <a class="small" href="">Esqueceu a senha?</a>
+                </div>
+                <div class="d-flex flex-row-reverse">
+                    <button type="button" class="shadow-none px-5 btn btn-primary" id="entrar">
+                        Entrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

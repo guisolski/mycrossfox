@@ -1,0 +1,107 @@
+html{
+  height: 100%;
+}
+body{
+  background-image: url("../assets/images/bg_cadastro.jpg");
+}
+
+.squareWhite{
+  background-color: white;
+  width: 30rem !important;
+  margin-top: 12%;
+}
+
+.noBorder{
+  border-width: 0rem !important;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.input-emailcadastro{
+  border-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+  border-bottom-color: gray !important;
+}
+
+.input-dropdownMenu
+{
+   border-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+  border-bottom-color: gray !important;
+}
+
+
+.error{
+  border-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+  border-bottom-color: red !important;
+}
+
+.pointer{
+  cursor: pointer !important;
+}
+
+.aling-right{
+  float: right !important;
+}
+
+.titulo{
+  font-size: 1.5rem;
+}
+
+.icone{
+  width: 25px;
+}
+.icone.texto{
+  margin-left: 20%;
+  margin-bottom: 0rem;
+  font-size: 1.2rem;
+}
+
+
+.rotateimg180 {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+@media (max-width: 576px) {
+  body{
+    background-image: none;
+  }
+}
+
+.dropdownMenu :hover
+{
+    cursor: pointer !important;
+}
+
+.dropdownMenu :active
+{
+    background-color: #ededed
+}
+
+.input_criarlogin::placeholder
+{
+    font-size: 3rem !important;
+}
+
+<- odasdosakods >
