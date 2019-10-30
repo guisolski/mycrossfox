@@ -4,6 +4,19 @@
 .white.text{
     color: white;
 }
+.paddin{
+    padding-top: 0.4%;
+}
+#skype{
+    padding-top: 1%;
+}
+input#pesquisa{
+    font-family: "FontAwesome";
+    background-color: rgba(138, 184, 221, 0.1);
+    border-color: rgba(138, 184, 221, 0.1);
+    color: rgba(0,0,0,1);
+    width: 100%;
+}
 
 .bigText{
     font-size: 1.3rem; 
@@ -21,3 +34,22 @@
 .paddinTop{
     padding-top: 0.5rem;
 }
+
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
