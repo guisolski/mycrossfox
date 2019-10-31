@@ -37,16 +37,28 @@ $(document).ready(function () {
 
     function entrarSenha(){
         if ($("#input_senha").val() != "") {
-            window.location.href = "email.html"
-            // alert("mandar pro servidor");
-            // $("#input_senha").removeClass("error")
-            // $("#titulo_senha #msg_erro_senha").remove()
+            $(function(){
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        usuario:$("#input_criarlogin").val(),
+                        senha: $("#input_senha").val(),
+                    },
+                    url: '../php/cadastro.php',
+                    success: function(data){
+                        alert(data);
+                    },
+                    error: function(){
+                        alert("erro");
+                    }
+                });
+            });
         }
         else {
-            $("#titulo_senha #msg_erro_senha").remove()
+            $("#titulo_senha #msg_erro_senha").remove();
             $("#input_senha").addClass("error");
-            $("#titulo_senha").append("<label id='msg_erro_senha' class='text-danger'>Sua conta ou senha está incorreta.<br>"+
-              "Se você não se lembra de sua senha redefina-a em 'Esqueceu a senha?'</label>")
+            $("#titulo_senha").append("<label id='msg_erro_senha' class='text-danger'>Insira uma senha válida.<br></label>");
         }
     }
 
