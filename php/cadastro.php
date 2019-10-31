@@ -13,10 +13,8 @@
 
 	$usuarios->loadXML(file_get_contents("../xml/base_usuarios.xml"), LIBXML_NOBLANKS);
 	
-	$id = ((int)$usuarios->usuario[-1]->attributes()["id"]) + 1;
 
 	$usuario = $usuarios->createElement('usuario', $xusuario);
-	$usuario->setAttribute("id", $id);
 	$usuario->setAttribute("senha", $xsenha);
 	
 	$usuarios->appendChild($usuario);
