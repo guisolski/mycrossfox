@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<usuarios>
+    <usuario id="1" senha="primeiroLogin">
+        admin@admin
+    </usuario>
+</usuarios>

