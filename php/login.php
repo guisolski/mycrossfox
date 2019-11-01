@@ -11,8 +11,7 @@
 
 	foreach($xml->usuario as $u){
 		if ($u == $usuario && $senha = $u["senha"]){
-            $retorno[0]["validacao"] = "Valido";
-            echo $retorno;
+            echo"Valido";
         }
 	}
 ?>

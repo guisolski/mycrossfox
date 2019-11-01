@@ -33,8 +33,23 @@ $(document).ready(function () {
 
     function entrarSenha(){
         if ($("#input_senha").val() != "") {
-            //window.location.href = "email.html";
-            mandaServidor($("#input_login").val(), $("#input_senha").val());
+            $(function(){
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        usuario:$("#input_login").val(),
+                        senha: $("#input_senha").val(),
+                    },
+                    url: '../php/login.php',
+                    success: function(data){
+                        alert(data);
+                    },
+                    error: function(){
+                        alert("erro");
+                    }
+                });
+            });
         }
         else {
             $("#titulo_senha #msg_erro_senha").remove()  
