@@ -1,8 +1,14 @@
 $(document).ready(function() {
     $("#senha").hide();
 
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
     function proximo() {
-        if ($("#input_login").val().indexOf('@') > 0) {
+		if(validateEmail($("#input_login").val())){
+        
             $("#nome").html('<i class="fa fa-arrow-left"></i> ' + $("#input_login").val());
             $("#login").hide();
             $("#senha").removeClass("invisible");
@@ -15,6 +21,7 @@ $(document).ready(function() {
             $("#titulo_login").append("<div class'row'><label class='text-danger' id='msg_erro_login'>Insira um endereço de email válido.</label></div>")
         }
     }
+
 
     $("#nome").click(function() {
         $("#login").show();
