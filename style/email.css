@@ -22,6 +22,10 @@
     background-color: snow;
 }
 
+.background_gray {
+    background-color: #F4EEEE;
+}
+
 .bigText {
     font-size: 1.3rem;
 }
