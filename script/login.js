@@ -12,7 +12,7 @@ $(document).ready(function () {
         else {
             $("#titulo_login #msg_erro_login").remove()
             $("#input_login").addClass("error");
-            $("#titulo_login").append("<label class='text-danger' id='msg_erro_login'><br>Insira um endereço de email, número de telefone ou nome Skype válidos.</label>")
+            $("#titulo_login").append("<label class='text-danger' id='msg_erro_login'><br>Insira um endereço de email válido.</label>")
         }
     }
 
