@@ -1,34 +1,45 @@
-.blue{
+.blue {
     background-color: #0078d4;
 }
-.white.text{
+
+.white.text {
     color: white;
 }
 
-#skype{
+#skype {
     padding-top: 1%;
 }
-input#pesquisa{
+
+#pesquisa {
     font-family: "FontAwesome";
-    background-color: rgba(138, 184, 221, 0.1);
-    border-color: rgba(138, 184, 221, 0.1);
-    color: rgba(0,0,0,1);
+    color: rgba(0, 0, 0, 1);
     width: 100%;
+    border-color: rgba(138, 184, 221, 0.1);
+    background-color: rgba(110, 184, 245, 0.959);
 }
 
-.bigText{
-    font-size: 1.3rem; 
+#pesquisa:focus {
+    background-color: snow;
 }
-.largeText{
-    font-size: 2rem; 
+
+.bigText {
+    font-size: 1.3rem;
 }
-.icone{
+
+.largeText {
+    font-size: 2rem;
+}
+
+.icone {
     width: 2.5rem;
 }
-.big{
-    height : 3rem !important;
+
+.big {
+    height: 3rem !important;
 }
 
-.paddinTop{
+.paddinTop {
     padding-top: 0.5rem;
 }
+
+r

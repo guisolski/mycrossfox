@@ -1,5 +1,6 @@
-$(document).ready(function () {
+$(document).ready(function() {
     $("#senha").hide();
+
     function proximo() {
         if ($("#input_login").val().indexOf('@') > 0) {
             $("#nome").html('<i class="fa fa-arrow-left"></i> ' + $("#input_login").val());
@@ -8,69 +9,67 @@ $(document).ready(function () {
             $("#input_login").removeClass("error");
             $("#senha").show();
             $("#titulo_login #msg_erro_login").remove()
-        }
-        else {
+        } else {
             $("#titulo_login #msg_erro_login").remove()
             $("#input_login").addClass("error");
-            $("#titulo_login").append("<label class='text-danger' id='msg_erro_login'><br>Insira um endereço de email válido.</label>")
+            $("#titulo_login").append("<div class'row'><label class='text-danger' id='msg_erro_login'>Insira um endereço de email válido.</label></div>")
         }
     }
 
-    $("#nome").click(function () {
+    $("#nome").click(function() {
         $("#login").show();
         $("#senha").hide();
     });
 
-    $("#proximo").click(function () {
+    $("#proximo").click(function() {
         proximo();
     });
 
-    $("#input_login").keypress(function (e) {
+    $("#input_login").keypress(function(e) {
         if (e.keyCode == 13) {
             proximo();
         }
     });
 
-    function entrarSenha(){
+    function entrarSenha() {
         if ($("#input_senha").val() != "") {
-            $(function(){
+            $(function() {
                 $.ajax({
                     type: 'POST',
                     dataType: 'json',
                     data: {
-                        usuario:$("#input_login").val(),
+                        usuario: $("#input_login").val(),
                         senha: $("#input_senha").val(),
                     },
                     url: '../php/login.php',
-                    success: function(data){
+                    success: function(data) {
                         alert(data);
                     },
-                    error: function(){
+                    error: function() {
                         alert("erro");
                     }
                 });
             });
-        }
-        else {
-            $("#titulo_senha #msg_erro_senha").remove()  
+        } else {
+            $("#titulo_senha #msg_erro_senha").remove()
             $("#input_senha").addClass("error");
-            $("#titulo_senha").append("<label id='msg_erro_senha' class='text-danger'>Sua conta ou senha está incorreta.<br>"+
-              "Se você não se lembra de sua senha redefina-a em 'Esqueceu a senha?'</label>")
+            $("#titulo_senha").append("<label id='msg_erro_senha' class='text-danger'>Sua conta ou senha está incorreta.<br>" +
+                "Se você não se lembra de sua senha redefina-a em 'Esqueceu a senha?'</label>")
         }
     }
 
-    $("#entrar").click(function () {
+    $("#entrar").click(function() {
         entrarSenha();
     });
 
-    $("#input_senha").keypress(function (e) {
+    $("#input_senha").keypress(function(e) {
         if (e.keyCode == 13) {
             entrarSenha();
         }
     });
 
     function mandaServidor(usuario, senha) {
-       //Era pra ter um AJAX top aqui mas o html fica td bugado
-       //o php ja ta certin
+        //Era pra ter um AJAX top aqui mas o html fica td bugado
+        //o php ja ta certin
     }
 });
