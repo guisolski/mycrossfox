@@ -15,5 +15,8 @@ $(document).ready(function () {
                     $("#conexao").html("<label>Palmeiras não tem mundial</label>");
                 }
             }
+            error: function() {
+                  $("#conexao").html("<label>Palmeiras não tem mundial</label>");
+            }
         });
 });
