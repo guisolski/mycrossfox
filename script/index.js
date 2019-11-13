@@ -12,9 +12,9 @@ $(document).ready(function () {
                 if (mundial == "não") {
                     window.location.href = "pages/login.html";
                 } else {
-                    $("#conexao").html("<label>Palmeiras não tem mundial</label>");
+                    $("#conexao").html("<label>Palmeiras não tem mundial, mas pelo menos conectou ao php</label>");
                 }
-            }
+            },
             error: function() {
                   $("#conexao").html("<label>Palmeiras não tem mundial</label>");
             }
