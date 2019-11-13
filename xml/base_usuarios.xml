@@ -1,2 +1,4 @@
 <?xml version="1.0"?>
-<usuario senha="admin">admin@admin</usuario>
+<usuarios>
+    <usuario senha="admin">admin@admin.com</usuario>
+</usuarios>
