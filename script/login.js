@@ -41,21 +41,23 @@ $(document).ready(function() {
     function entrarSenha() {
         if ($("#input_senha").val() != "") {
             $(function() {
-                $.ajax({
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {
-                        usuario: $("#input_login").val(),
-                        senha: $("#input_senha").val(),
-                    },
-                    url: '../php/login.php',
-                    success: function(data) {
-                        alert(data);
-                    },
-                    error: function() {
-                        alert("erro");
-                    }
-                });
+                $.ajax(
+                    {
+                        type: "POST",
+                        url: "../php/login.php",
+                        contentType: 'application/json',
+                        data: {
+                            usuario: $("#input_login").val(),
+                            senha: $("#input_senha").val()
+                        },
+                        success: function (data) {
+                            var resultado = JSON.parse(data);
+                            window.location.href = resultado["link"];
+                        },
+                        error: function() {
+                             alert("erro")
+                        }
+                    });
             });
         } else {
             $("#titulo_senha #msg_erro_senha").remove()
