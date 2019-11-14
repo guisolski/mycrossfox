@@ -14,15 +14,11 @@
 	}
 	
 	
-	if($valido){
-		$_SESSION['usuario'] = $usuario;
-		$_SESSION['senha'] = $senha;
+	if($valido){		
 		$retorno["link"] =  trim("email.html");
 		echo json_encode($retorno);
 	}
 	else{
-		unset ($_SESSION['usuario']);
-		unset ($_SESSION['senha']);
 		$retorno["link"] =  trim("../index.html");
 		echo json_encode($retorno);
 	}	

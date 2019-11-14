@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $("#senha").hide();
-
     function validateEmail(email) {
         var re = /^\w+@[coldmail]+[outlock]+?\.[a-zA-Z]{2,3}$/;
         return re.test(email);
@@ -40,25 +39,24 @@ $(document).ready(function() {
 
     function entrarSenha() {
         if ($("#input_senha").val() != "") {
-            $(function() {
-                $.ajax(
-                    {
-                        type: "POST",
-                        url: "../php/login.php",
-                        contentType: 'application/json',
-                        data: {
-                            usuario: $("#input_login").val(),
-                            senha: $("#input_senha").val(),
-                        },
-                        success: function (data) {
-                            var resultado = JSON.parse(data);
-                            window.location.href = resultado["link"];
-                        },
-                        error: function() {
-                             alert("erro");
-                        }
-                    });
-            });
+                var login  = $("#input_login").val();
+                var senha  = $("#input_senha").val();
+                $.ajax({
+                    type:"POST",
+                    url : "../php/login.php",
+                    data : {
+                        usuario :login,
+                        senha : senha
+                    },
+                    success: function (data) {
+                        var resultado = JSON.parse(data);
+                        sessionStorage.setItem("usuario",JSON.stringify(new usuario(login,senha)));
+                        window.location.href = resultado["link"];
+                    },
+                    error: function() {
+                         alert("erro");
+                    }
+                });
         } else {
             $("#titulo_senha #msg_erro_senha").remove()
             $("#input_senha").addClass("error");
