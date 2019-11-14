@@ -45,7 +45,7 @@ $(document).ready(function() {
                     type:"POST",
                     url : "../php/login.php",
                     data : {
-                        usuario :login,
+                        login :login,
                         senha : senha
                     },
                     success: function (data) {
