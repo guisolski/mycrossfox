@@ -1,5 +1,5 @@
 <?php
-	$usuario = $_POST['usuario'];
+	$login = $_POST['login'];
     $senha = $_POST["senha"];
 	//Inicio Leitura XML
 
@@ -8,7 +8,7 @@
 	$valido = false;
 	
 	foreach($xml->usuario as $u){
-		if ($u == $usuario && $senha = $u["senha"]){
+		if ($u == $login && $senha = $u["senha"]){
             $valido = true;
         }
 	}
