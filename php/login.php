@@ -1,5 +1,5 @@
 <?php
-    $usuario = $_POST["usuario"];
+	$usuario = $_POST['usuario'];
     $senha = $_POST["senha"];
 	//Inicio Leitura XML
 

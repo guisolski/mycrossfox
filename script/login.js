@@ -2,7 +2,7 @@ $(document).ready(function() {
     $("#senha").hide();
 
     function validateEmail(email) {
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var re = /^\w+@[coldmail]+[outlock]+?\.[a-zA-Z]{2,3}$/;
         return re.test(email);
     }
 
@@ -48,14 +48,14 @@ $(document).ready(function() {
                         contentType: 'application/json',
                         data: {
                             usuario: $("#input_login").val(),
-                            senha: $("#input_senha").val()
+                            senha: $("#input_senha").val(),
                         },
                         success: function (data) {
                             var resultado = JSON.parse(data);
                             window.location.href = resultado["link"];
                         },
                         error: function() {
-                             alert("erro")
+                             alert("erro");
                         }
                     });
             });
