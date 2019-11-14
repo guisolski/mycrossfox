@@ -40,9 +40,8 @@
                      <div id = "dropdown_dominio" class = "row input-dropdownMenu ml-2 p0" >
                         <div class="input-group input-group-sm" id = "dropdown_opcoes">
                           <select class="form-control noBorder shadow-none" style = "cursor:pointer" id = "selecionarOpcao">
-                            <option selected>@outlook.com</option>
-                            <option value="1">@outlook.com.br</option>
-                            <option value="2">@hotmail.com</option>
+                            <option selected>@outlock.com</option>
+                            <option value="1">@coldmail.com</option>
                           </select>
                         </div>
                      </div>
@@ -76,7 +75,19 @@
                     <input type="password" class="input-emailcadastro form-control noBorder shadow-none p-0" aria-label="Sizing example input"
                         placeholder="Senha" aria-describedby="inputGroup-sizing-lg" id="input_senha">
                 </div>
-                <div class="d-flex flex-row-reverse">
+                <div class="row mt-3">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input pointer" id="exibirSenha">
+                        <label class="form-check-label pointer" for="exibirSenha">Exibir Senha.</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input pointer" id="desejoInformacoes">
+                        <label class="form-check-label pointer" for="desejoInformacoes">Desejo obter informações, dicas e ofertas de produtos e serviços da Mycrossfox</label>
+                    </div>
+                </div>
+                <div class="d-flex flex-row-reverse mt-3">
                     <button type="button" class="shadow-none px-5 btn btn-primary" id="entrar">
                         Entrar
                     </button>
