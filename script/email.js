@@ -20,7 +20,7 @@ $(document).ready(function () {
         },
         success: function (data) {
             var resultado = JSON.parse(data);
-            console.log(resultado);
+            gera_lista_emails(resultado);
             $("#overlay").fadeOut();
         },
         error: function () {
