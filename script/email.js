@@ -27,7 +27,7 @@ $(document).ready(function () {
             alert("erro");
         }
     });
-
+    $("#nova_mensagem").click(inputs_email);
     $(".opcoes").click(function () {
         var classe = $(this).attr("class");
         var tipo = $(this).attr("tipo");

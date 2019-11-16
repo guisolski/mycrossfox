@@ -79,7 +79,7 @@
     //cria um array
 	$array = array("send","received","header","body","data");
 	//inicializa o xml
-	$filename = "mycrossfox/xml/base_emails.xml";
+	$filename = "../xml/base_emails.xml";
 	$xml = new DOMDocument( '1.0', 'UTF-8' );
 	$xml->preserveWhiteSpace = false;
 	$xml->formatOutput = true;
@@ -119,7 +119,7 @@
             $header = $_GET["header"];
             $body = $_GET["body"];
             $data = date_default_timezone_get();
-            send_email($send,$received,$header,$body,$data);
+            send_email($send,$received,$header,$body,date('m/d/Y h:i:s a', time()));
         break;
     }
   }

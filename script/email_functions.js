@@ -50,9 +50,35 @@ function gera_lista_emails(lista) {
     });
 }
 
-function gera_email(lista){
+function gera_email(lista) {
     var html = "";
-    html += lista.name +' ' + lista.name2+' ' + lista.header + ' ' + lista.data+' ' + lista.body;
+    html += lista.name + ' ' + lista.name2 + ' ' + lista.header + ' ' + lista.data + ' ' + lista.body;
     $("#email").empty().html(html);
 
+}
+function inputs_email() {
+    var html = "";
+    html += "<label>Para:</label> <input type='text' id='received'> <br> <label>Assunto:</label> <input type='text' id='header'> <br> <label>Corpo:</label> <textarea rows='5' col='10' id='body'></textarea> <button type='button' class='shadow-none px-5 btn btn-primary' id='enviar'>Enviar</button>";
+    $("#email").empty().html(html);
+    $("#enviar").click(function () {
+        $.ajax({
+            type: "GET",
+            url: "../php/email.php",
+            data: {
+                login: usuario.login,
+                senha: usuario.senha,
+                action: "send_email",
+                received : $("#received").val(),
+                header : $("#header").val(),
+                body : $("#body").val()
+            },
+            success: function (data) {
+                var resultado = JSON.parse(data);
+
+            },
+            error: function () {
+                alert("erro");
+            }
+        });
+    });
 }

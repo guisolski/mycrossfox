@@ -24,8 +24,15 @@
   <email>
     <send>toto@outlock.com</send>
     <received>admin@outlock.com</received>
-    <header>Vamos testar o tamanho dessa porra gente do cara porque ele é grande</header>
+    <header>Vamos testar o tamanho dessa porra gente do cara porque ele &#xE9; grande</header>
     <body>teste</body>
     <data>11/15/2019 04:47:00 pm</data>
+  </email>
+  <email>
+    <send>admin@outlock.com</send>
+    <received>teste@outlock.com</received>
+    <header>ola</header>
+    <body>ola</body>
+    <data>11/16/2019 03:12:21 am</data>
   </email>
 </emails>
