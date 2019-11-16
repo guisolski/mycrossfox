@@ -17,8 +17,8 @@
         $this-> name = $_name;
         $this-> header = $_header;
         $this-> data = $_data;
-        $this-> data = $_body;
-        $this-> $name2 = $_name2;
+        $this-> body = $_body;
+        $this-> name2 = $_name2;
      }
 
  }

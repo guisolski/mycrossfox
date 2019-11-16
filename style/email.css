@@ -52,6 +52,13 @@
 .opcoes{
 	cursor: pointer;
 }
+.email{
+	cursor: pointer;
+	border-width: 0.1rem;
+	border-color: aqua;
+	border-style: solid;
+	border-radius: 3%;
+}
 .paddinTop {
     padding-top: 0.5rem!important;
 }

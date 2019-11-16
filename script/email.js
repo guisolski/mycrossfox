@@ -13,10 +13,10 @@ $(document).ready(function () {
         type: "GET",
         url: "../php/email.php",
         data: {
-            login   : usuario.login,
-            senha   : usuario.senha,
-            action  : "list_emails",
-            type    : "recived"
+            login: usuario.login,
+            senha: usuario.senha,
+            action: "list_emails",
+            type: "recived"
         },
         success: function (data) {
             var resultado = JSON.parse(data);
@@ -28,22 +28,22 @@ $(document).ready(function () {
         }
     });
 
-    $(".opcoes").click(function(){
+    $(".opcoes").click(function () {
         var classe = $(this).attr("class");
         var tipo = $(this).attr("tipo");
-        
-        if(classe.indexOf("background_blue") == -1){
+
+        if (classe.indexOf("background_blue") == -1) {
             $(".opcoes").removeClass("background_blue");
             $(this).addClass("background_blue");
-            
+
             $.ajax({
                 type: "GET",
                 url: "../php/email.php",
                 data: {
-                    login   : usuario.login,
-                    senha   : usuario.senha,
-                    action  : "list_emails",
-                    type    : tipo
+                    login: usuario.login,
+                    senha: usuario.senha,
+                    action: "list_emails",
+                    type: tipo
                 },
                 success: function (data) {
                     var resultado = JSON.parse(data);
@@ -55,4 +55,7 @@ $(document).ready(function () {
             });
         }
     });
+
+    
+
 });
