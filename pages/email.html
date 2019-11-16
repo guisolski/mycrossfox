@@ -55,28 +55,37 @@
     </div>
 
 
-    <div class="background_gray">
+    <div class="col-sm-12 paddinTop ">
         <div class="row">
-            <div class="col-sm-2">
-                <div >
-                    Caixa de entrada
-                </div>
-                <div >
-                    Enviados
-                </div>
+            <i class="fas fa-align-justify largeText paddinleft paddinRigth"></i>
+            <button type="button" class="shadow-none px-5 btn btn-primary" id="nova_mensagem">
+                Nova Mensagem
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <div class="opcoes background_blue" tipo="recived"> 
+                <i class="fas fa-archive largeText paddinleft paddinRigth"></i>
+                <label>Caixa de entrada</label>
             </div>
-            <div class="col-sm-4" id="emails">
-                emails
-            </div>
-            <div class="col-sm-6">
-                corpo
+            <div class="opcoes" tipo="send">
+                <i class="fas fa-paper-plane largeText paddinleft paddinRigth"></i>
+                Enviados
             </div>
         </div>
+        <div class="col-3" id="emails">
+        </div>
+        <div class="col-7">
+            corpo
+        </div>
+
     </div>
 
     <div id="overlay">
         <div class="cv-spinner">
-            <span class="spinner"></span>
+            <span class="spinner"><img src="../assets/images/icones/outlock.png" class="icone"></span>
         </div>
     </div>
 </body>

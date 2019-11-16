@@ -1,6 +1,6 @@
 <?php
   class email {
-    var $name,$name2,$header,$data,$body;
+    var $name,$header,$data,$body,$name2;
     public function __construct() {
         $get_arguments       = func_get_args();
         $number_of_arguments = func_num_args();
@@ -45,7 +45,8 @@
         switch ($type){
             case "send":
                 if($i->send == $login){
-                    $list[strval($i->received)] = strval($i->header);
+                    $_email = new email(strval($i->send),strval($i->header),strval($i->data));
+                    $list[$contador] = $_email;
                  }
             break;
             case "recived":

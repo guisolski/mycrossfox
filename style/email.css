@@ -5,6 +5,9 @@
 .white.text {
     color: white;
 }
+.blueText{
+	color: #0078d4;
+}
 
 #skype {
     padding-top: 1%;
@@ -25,9 +28,14 @@
 .background_gray {
     background-color: #F4EEEE;
 }
-
+.background_blue{
+	background-color: rgba(110, 184, 245, 0.959);
+}
 .bigText {
     font-size: 1.3rem;
+}
+.smallText{
+	font-size: 0.8rem;
 }
 
 .largeText {
@@ -41,10 +49,22 @@
 .big {
     height: 3rem !important;
 }
-
-.paddinTop {
-    padding-top: 0.5rem;
+.opcoes{
+	cursor: pointer;
 }
+.paddinTop {
+    padding-top: 0.5rem!important;
+}
+.paddinTop_big {
+    padding-top: 1rem!important;
+}
+.paddinleft {
+    padding-left: 0.5rem!important;
+}
+.paddinRigth {
+    padding-right: 0.5rem!important;
+}
+
 
 #overlay{	
 	position: fixed;
@@ -62,6 +82,7 @@
     align-items: center;
     
 }
+
 .spinner {
 	width: 5rem;
 	height: 5rem;

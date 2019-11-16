@@ -27,4 +27,32 @@ $(document).ready(function () {
             alert("erro");
         }
     });
+
+    $(".opcoes").click(function(){
+        var classe = $(this).attr("class");
+        var tipo = $(this).attr("tipo");
+        
+        if(classe.indexOf("background_blue") == -1){
+            $(".opcoes").removeClass("background_blue");
+            $(this).addClass("background_blue");
+            
+            $.ajax({
+                type: "GET",
+                url: "../php/email.php",
+                data: {
+                    login   : usuario.login,
+                    senha   : usuario.senha,
+                    action  : "list_emails",
+                    type    : tipo
+                },
+                success: function (data) {
+                    var resultado = JSON.parse(data);
+                    gera_lista_emails(resultado);
+                },
+                error: function () {
+                    alert("erro");
+                }
+            });
+        }
+    });
 });
