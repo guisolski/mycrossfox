@@ -4,7 +4,6 @@ $(document).ready(function () {
 
 
     function proximo() {
-
         if ($("#input_criarlogin").val() != "") {
             $("#nome").html('<i class="fa fa-arrow-left"></i> ' + $("#input_criarlogin").val() + $("#selecionarOpcao :selected").text());
             $("#criarLogin").hide();
@@ -38,19 +37,22 @@ $(document).ready(function () {
     function entrarSenha(){
         if ($("#input_senha").val() != "") {
             $(function(){
+                var login  = $("#input_criarlogin").val();
+                var senha  = $("#input_senha").val();
                 $.ajax({
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {
-                        usuario:$("#input_criarlogin").val(),
-                        senha: $("#input_senha").val(),
+                    type:"POST",
+                    url : "../php/cadastro.php",
+                    data : {
+                        login :login,
+                        senha : senha
                     },
-                    url: '../php/cadastro.php',
-                    success: function(data){
-                        alert(data);
+                    success: function (data) {
+                        var resultado = JSON.parse(data);
+                        sessionStorage.setItem("usuario",JSON.stringify(new usuario(login,senha)));
+                        window.location.href = resultado["link"];
                     },
-                    error: function(){
-                        alert("erro");
+                    error: function() {
+                         alert("erro");
                     }
                 });
             });
@@ -69,6 +71,16 @@ $(document).ready(function () {
     $("#input_senha").keypress(function (e) {
         if (e.keyCode == 13) {
             entrarSenha();
+        }
+    });
+
+    $('#exibirSenha').change(function() {
+        if(this.checked) {
+            console.log("oi");
+            $("#input_senha").prop("type", "text");
+        }
+        else{
+            $("#input_senha").prop("type", "password");
         }
     });
 
