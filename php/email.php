@@ -51,7 +51,7 @@
             break;
             case "recived":
                 if($i->received == $login){
-                   $_email = new email(strval($i->send),strval($i->header),strval($i->data));
+                   $_email = new email(strval($i->received),strval($i->header),strval($i->data));
                    $list[$contador] = $_email;
                 }
             break;

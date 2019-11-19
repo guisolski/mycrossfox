@@ -1,10 +1,14 @@
 $(document).ready(function () {
     $("#criarSenha").hide();
-
+    
+    function validateEmail(email) {
+        var re = /^\w+(\.\w+)*$/;
+        return re.test(email);
+    }
 
 
     function proximo() {
-        if ($("#input_criarlogin").val() != "") {
+        if (validateEmail($("#input_criarlogin").val())) {
             $("#nome").html('<i class="fa fa-arrow-left"></i> ' + $("#input_criarlogin").val() + $("#selecionarOpcao :selected").text());
             $("#criarLogin").hide();
             $("#criarSenha").removeClass("invisible");

@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <usuarios>
-    <usuario senha="admin">admin@outlock.com</usuario>
+  <usuario senha="admin">admin@outlock.com</usuario>
+  <usuario senha="123">marco</usuario>
+  <usuario senha="123">senha_123.teste.regex</usuario>
 </usuarios>
