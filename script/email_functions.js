@@ -6,6 +6,7 @@ function gera_lista_emails(lista) {
         html += "<div class='email' id='" + i + "'>";
         var obj = lista[i];
         for (var j in obj) {
+            console.log(obj);
             var imprime = obj[j];
             if (imprime != null) if (imprime.length > 49) imprime = imprime.substring(0, 49) + "...";
             if (j == "name") {
@@ -15,7 +16,10 @@ function gera_lista_emails(lista) {
                 html += "<label class='blueText smallText paddinRigth'>" + imprime + "</label>";
             }
             else if (j == "data") {
-                html += "<label class='blueText smallText'>" + imprime + "</label>";
+                html += "<label class='blueText smallText'>" + imprime + "</label> <br>";
+            }
+            else if (j == "body") { 
+                html += "<label class='blueText smallText'>" + imprime + "</label> <br>";
             }
         }
         html += "</div>"
@@ -73,8 +77,8 @@ function inputs_email() {
                 body : $("#body").val()
             },
             success: function (data) {
-                var resultado = JSON.parse(data);
-
+                //var resultado = JSON.parse(data);
+                $("#email").empty().html("<label>Sucesso</label>");
             },
             error: function () {
                 alert("erro");
