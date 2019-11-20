@@ -16,73 +16,64 @@
 </head>
 
 <body>
-    <div class="col-sm-12 blue">
-        <div class="row white text">
+    <div class="container-fluid h-100 bg-dark text-white">
+        <!--navbar-->
+        <div class="row blue">
             <div class="col-sm-1 paddinTop">
-                <i class="fas fa-align-justify bigText largeText"></i>
+                <i class="fa fa-bars fa-2x"></i>
             </div>
             <div class="col-sm-1 bigText paddinTop">
                 <label>OutLock</label>
             </div>
 
-            <div class="col-sm-2 paddinTop" id="div_pesquisa">
-                <input type="text" id="pesquisa" placeholder="&#xf002;">
+            <div class="col-sm-2 pt-2" id="div_pesquisa">
+                <input class="px-2" type="text" id="pesquisa" placeholder="Pesquisar">
             </div>
 
             <!-- <i class="fas fa-search" aria-hidden="true"></i>-->
 
             <div class="col-sm-5" id="vazio"></div>
-            <div class="col-sm-3">
-                <div class="row bigText">
-                    <div class="col-sm" id="skype">
-                        <label> <img src="../assets/images/icones/skype.png" class="icone"></label>
+            
+        </div>
+        <!--Fim Navbar-->
+    
+        
+    
+        <div class="row">
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-sm-12 paddinTop ">
+                        <button type="button" class="shadow-none px-5 btn btn-primary" id="nova_mensagem">
+                            Nova Mensagem
+                        </button>
                     </div>
-                    <div class="col-sm paddinTop">
-                        <i class="fa fa-gear "></i>
-                    </div>
-                    <div class="col-sm paddinTop">
-                        <i class="fa fa-question "></i>
-                    </div>
-                    <div class="col-sm paddinTop">
-                        <i class="fa fa-bullhorn "></i>
-                    </div>
-                    <div class="col-sm paddinTop">
-                        <label>foto</label>
+                </div>
+                <div class="form-group col-12">
+                        <hr>
+               </div>
+                <div class="opcoes background_blue" tipo="recived"> 
+                    <i class="fas fa-angle-right largeText p-2"></i>
+                    <label>Caixa de entrada</label>
+                </div>
+                <div class="opcoes" tipo="send">
+                    <i class="fas fa-paper-plane largeText paddinleft paddinRigth"></i>
+                    Enviados
+                </div>
+            </div>
+            <div class="col-3" id="emails">
+                <div class="row">
+                    <div class="col-12">
+
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-
-    <div class="col-sm-12 paddinTop ">
-        <div class="row">
-            <i class="fas fa-align-justify largeText paddinleft paddinRigth"></i>
-            <button type="button" class="shadow-none px-5 btn btn-primary" id="nova_mensagem">
-                Nova Mensagem
-            </button>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-2">
-            <div class="opcoes background_blue" tipo="recived"> 
-                <i class="fas fa-archive largeText paddinleft paddinRigth"></i>
-                <label>Caixa de entrada</label>
+            <div class="col-7" id="email">
+                corpo
             </div>
-            <div class="opcoes" tipo="send">
-                <i class="fas fa-paper-plane largeText paddinleft paddinRigth"></i>
-                Enviados
-            </div>
+    
         </div>
-        <div class="col-3" id="emails">
-        </div>
-        <div class="col-7" id="email">
-            corpo
-        </div>
-
     </div>
-
+    
     <div id="overlay">
         <div class="cv-spinner">
             <span class="spinner"><img src="../assets/images/icones/outlock.png" class="icone"></span>

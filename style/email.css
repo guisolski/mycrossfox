@@ -1,3 +1,7 @@
+html, body {
+	height: 100%;
+}
+
 .blue {
     background-color: #0078d4;
 }
@@ -8,22 +12,11 @@
 .blueText{
 	color: #0078d4;
 }
-
-#skype {
-    padding-top: 1%;
-}
-
 #pesquisa {
-    font-family: "FontAwesome";
-    color: rgba(0, 0, 0, 1);
-    width: 100%;
-    border-color: rgba(138, 184, 221, 0.1);
-    background-color: rgba(110, 184, 245, 0.959);
+	border-radius: 5px;
+	width: 100%;
 }
 
-#pesquisa:focus {
-    background-color: snow;
-}
 
 .background_gray {
     background-color: #F4EEEE;
