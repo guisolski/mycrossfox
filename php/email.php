@@ -13,6 +13,12 @@
        $this-> header = $_header;
        $this-> data = $_data;
     }
+    public function __construct4($_name,$_header,$_data,$_body) {
+        $this-> name = $_name;
+        $this-> header = $_header;
+        $this-> data = $_data;
+        $this-> body = $_body;
+     }
     public function __construct5($_name,$_name2,$_header,$_data,$_body) {
         $this-> name = $_name;
         $this-> header = $_header;
@@ -45,13 +51,13 @@
         switch ($type){
             case "send":
                 if($i->send == $login){
-                    $_email = new email(strval($i->received),strval($i->header),strval($i->data));
+                    $_email = new email(strval($i->received),strval($i->header),strval($i->data),strval($i->body));
                     $list[$contador] = $_email;
                  }
             break;
             case "recived":
                 if($i->received == $login){
-                   $_email = new email(strval($i->send),strval($i->header),strval($i->data));
+                   $_email = new email(strval($i->send),strval($i->header),strval($i->data),strval($i->body));
                    $list[$contador] = $_email;
                 }
             break;
