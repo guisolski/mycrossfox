@@ -1,11 +1,9 @@
 html, body {
 	height: 100%;
 }
-
 .blue {
     background-color: #0078d4;
 }
-
 .white.text {
     color: white;
 }
@@ -47,10 +45,9 @@ html, body {
 }
 .email{
 	cursor: pointer;
-	border-width: 0.1rem;
-	border-color: aqua;
-	border-style: solid;
-	border-radius: 3%;
+}
+.email_p :hover{
+	background-color: rgba(116, 167, 209, 0.534);
 }
 .paddinTop {
     padding-top: 0.5rem!important;
