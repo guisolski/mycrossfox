@@ -41,7 +41,7 @@ $(document).ready(function () {
     function entrarSenha(){
         if ($("#input_senha").val() != "") {
             $(function(){
-                var login  = $("#input_criarlogin").val();
+                var login  = $("#input_criarlogin").val()+$("#selecionarOpcao").val();
                 var senha  = $("#input_senha").val();
                 $.ajax({
                     type:"POST",
